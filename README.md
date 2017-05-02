@@ -18,7 +18,7 @@ Você vai criar um aplicativo de blog em uma SPA, com design responsivo pronto p
 - Incluir campo para busca de posts, que deve ser acessível em qualquer tela da aplicação (lista de posts, detalhe de post, etc.). Pode ficar em uma barra lateral ao conteúdo principal ou no header da aplicação.
 - Incluir lista de todas as tags, que deve ser acessível em qualquer tela da aplicação (lista de posts, detalhe de post, etc.). Deve ficar em uma barra lateral.
 - Detalhe de post, com lista de comentários relacionados ao post, exibindo os seguintes campos:
-  - Título 
+  - Título
   - Data de criação (formatada em DD/MM/YYYY HH:mm)
   - Autor
   - Imagem (resolução que preencha o corpo do detalhe do post)
@@ -42,7 +42,7 @@ Estes são os requisitos de UI que a aplicação deve possuir para ser aceita ne
 
 - Responsiva: A aplicação deve adaptar o seu layout e as suas interfaces de acordo com o tamanho da tela do dispositivo do usuário (smartphone, tablet ou desktop).
 - Single Page Application: Não pode haver refresh no browser para acessar outra área da aplicação.
-- Tratamento de erros: Se houver algum erro não previsto no uso da aplicação, por conta de uma falha de requisição por exemplo, deve ser implementada uma estratégia de fallback (exibir dados em cache), ou deve ser exibido para o usuário o motivo da falha de maneira clara e concisa.
+- Tratamento de erros: Se houver algum erro não previsto no uso da aplicação, por conta de uma falha de requisição por exemplo, deve ser exibido para o usuário o motivo da falha de maneira clara e concisa.
 
 # API JSON Rest
 Será utilizada para este desafio uma API JSON de Posts gerada pelo [json-server], que é um módulo npm que produz uma API com funcionalidades de CRUD a partir de um arquivo .json. O arquivo para a API de Posts está incluso no desafio (db.json), e para subir o json-server deve ser executado os seguintes passos:
@@ -82,9 +82,9 @@ Este comando irá iniciar um servidor para a API Rest na porta 3000, acessível 
 - Utilizar o Webpack para realizar o build do SASS, construir um sourceMap para facilitar o debugging e subir um devServer para atualizar a aplicação com novas alterações no código em real time.
 - Utilizar o React Router para realizar a navegação entre listagem e detalhe de posts.
 - Utilizar a biblioteca [momentjs] para manipulação de datas.
+- Pesquisar a documentação do [json-server] para as chamadas REST que não estão listadas neste documento, necessárias para a implementação dos desafios bônus.
 
 # Bônus
-- OBS: Pesquisar a documentação do [json-server] para as chamadas REST que não estão listadas neste documento, necessárias para a implementação dos desafios bônus. 
 - Implementar as seguintes funcionalidades para a área de comentários:
   - Responder a um comentário (utilizando o campo parent_comment_id).
   - Editar um comentário.
@@ -92,6 +92,7 @@ Este comando irá iniciar um servidor para a API Rest na porta 3000, acessível 
 - Criar uma nova área para a administração de Posts. (Criação, Edição e Remoção de Posts)
 - Criar uma nova área para a administração de Tags  (Criação, Edição e Remoção de Tags), junto com um campo de busca por autocomplete para inclusão de tags na administração de Posts.
 - Implementar o controle do estado da sua aplicação React utilizando alguma biblioteca **Flux**, como por exemplo, o [Mobx] ou o [Redux].
+- Alterar a forma que é feita o tratamento de erros, em caso de erros de requisição de conteúdo, para a implementação de uma estratégia de fallback (exibir dados em cache). Lembrando que a mensagem de erro deve continuar a ser exibida para o usuário, como especificado originalmente.
 - Implementação de testes unitários javascript.
 
 [SASS]: http://sass-lang.com/
@@ -106,5 +107,3 @@ Este comando irá iniciar um servidor para a API Rest na porta 3000, acessível 
 [Mobx]: https://github.com/mobxjs/mobx
 [Redux]: http://redux.js.org/
 [momentjs]: https://momentjs.com/
-
-
